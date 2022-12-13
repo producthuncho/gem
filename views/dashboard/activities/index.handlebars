@@ -1,0 +1,86 @@
+
+<div class="row">
+    <div class="container-fluid mb-5">
+        {{> _msg}}
+
+        {{#if tradeHistory}}
+        <div class="container-fluid">
+            <div class="card shadow">
+                <div class="card-header py-3">
+                    <p class="text-primary m-0 font-weight-bold">Trade History</p>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive table mt-2" id="dataTable" role="grid"
+                        aria-describedby="dataTable_info">
+                        <table class="table dataTable my-0" id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th>Trade ID</th>
+                                    <th>Assets</th>
+                                    <th>Call/Put</th>
+                                    <th>Start Time</th>
+                                    <th>Closing Time</th>
+                                    <th>Amount</th>
+                                    <th>Payout</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                No Trading History
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+
+        {{#if transactionHistory}}
+        <div class="card shadow">
+            <div class="card-header py-3">
+                <p class="text-primary m-0 font-weight-bold">Trade History</p>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                    <table class="table dataTable my-0" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Trade ID</th>
+                                <th>Transaction Type</th>
+                                <th>Wallet</th>
+                                <th>Amount</th>
+                                {{!-- <th>Date</th> --}}
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {{#each withdrawals }}
+                            <tr>
+                                <td>{{_id}}</td>
+                                <td>{{ transaction_type }}</td>
+                                <td>{{#if wallet }}{{ wallet }}{{else}}{{#each
+                                    ../admin_wallet}}{{wallet}}{{/each}}{{/if}}
+                                </td>
+                                <td>${{amount}}</td>
+                                {{!-- <td>{{ date }}</td> --}}
+                                <td>
+                                    <button class="btn btn-primary">{{ status }}</button>
+                                </td>
+                            </tr>
+
+                            {{else}}
+                            No Trading History
+                            {{/each}}
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+
+    </div>
+</div>

@@ -1,0 +1,46 @@
+
+<!-- Single pro tab review Start-->
+<div class="single-pro-review-area mt-t-30 mg-b-15">
+    <div class="container-fluid">
+        <div class="jumbotron" style="background-color: white;">
+            {{> _msg }}
+            <h3><i class="fa fa-bank"></i> Recent withdrawal requests</h3>
+            <br><br>
+            <p><strong>Total records: {{requests.length}}</strong></p>
+
+                    {{#if requests }}
+                    {{#each requests }}
+                    <div class="alert alert-success">
+                        <h5>{{transaction_type}} request from {{user.firstname}} {{user.lastname}}</h5>
+                        <h5>Email: {{ user.email }} Phone: {{ user.phone }}</h5>
+                        <h5>Date: {{date}}</h5>
+                        <h5>Amount: ${{amount}}</h5>
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                {{#if confirmed}}<button class="btn btn-success"><i class="fa fa-check"></i> Transaction
+                                    confirmed!</button>
+                                {{else}}
+                                <form action="/dashboard/manage/confirm-transaction/{{_id}}" method="POST"
+                                    class="col-md-6">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Confirm
+                                        transaction</button>
+                                </form>
+                                {{/if}}
+                            </div>
+
+                            <form action="/dashboard/manage/request/delete/{{_id}}/?_method=DELETE" method="POST"
+                                class="pull-right">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{ else }}
+                    <div class="alert alert-warning">No recent withdrawal request!</div>
+                    {{/if}}
+
+        </div>
+    </div>
+</div>

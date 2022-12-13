@@ -1,0 +1,93 @@
+<div class="single-pro-review-area mt-t-30 mg-b-15">
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <h3 class="text-capitalize">Welcome, {{user.firstname}}!</h3>
+      <br />
+
+      <h4>Your wallet address:</h4>
+      <h4 class="text-primary"><strong>{{#each
+            wallet
+          }}{{wallet}}{{/each}}</strong></h4>
+      <h5>Last changed by:
+        {{#each wallet}}{{user.firstname}} {{user.lastname}}{{/each}}
+        <br />{{#each wallet}}{{date}}{{/each}}
+      </h5>
+
+      <br />
+
+      <form action="/dashboard/manage/wallet" method="POST">
+        <div class="form-group">
+          <label for="wallet">New wallet address</label>
+          <input
+            type="text"
+            id="wallet"
+            name="wallet"
+            required
+            class="form-control"
+            placeholder="Paste wallet address"
+          />
+        </div>
+        <button class="btn btn-primary">Change</button>
+      </form>
+
+      <br /><br />
+
+      <h4>ADMIN PANEL:</h4>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div
+            class="jumbotron text-center"
+            style="background-color: white; box-shadow: 0 1px 2px #000;"
+          >
+            <h1><i class="fa fa-users"></i></h1>
+            <h4>Registered users</h4>
+
+            <a href="/dashboard/manage/users" class="btn btn-primary">View users</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div
+            class="jumbotron text-center"
+            style="background-color: white; box-shadow: 0 1px 2px #000;"
+          >
+            <h1><i class="fa fa-envelope"></i></h1>
+            <h4>Clients' Messages</h4>
+
+            <a href="/dashboard/manage/messages" class="btn btn-primary">View
+              messages</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div
+            class="jumbotron text-center"
+            style="background-color: white; box-shadow: 0 1px 2px #000;"
+          >
+            <h1><i class="fa fa-users"></i></h1>
+            <h4>Deposits/ withdrawals</h4>
+
+            <a href="/dashboard/manage/withdrawals" class="btn btn-primary">View
+              all</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div
+            class="jumbotron text-center"
+            style="background-color: white; box-shadow: 0 1px 2px #000;"
+          >
+            <h1><i class="fa fa-cloud"></i></h1>
+            <h4>Trading Activities</h4>
+
+            <a href="/dashboard/manage/activities" class="btn btn-primary">View
+              activities</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

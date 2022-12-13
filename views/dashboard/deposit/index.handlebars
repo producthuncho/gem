@@ -1,0 +1,113 @@
+<div class="d-xl-flex justify-content-xl-center align-items-xl-center">
+  <div class="card" style="background-color: #fff;max-width: 650px;">
+    <div class="card-body text-center">
+      <h4
+        class="text-center card-title"
+        style="font-weight: bold; font-family: 'Baloo Bhai', cursive;"
+      >FUND YOUR ACCOUNT WITH BITCOIN<br /></h4>
+      <h6 class="text-muted card-subtitle mb-2">Bitcoin transactions are fast to
+        process. Proceed to fund your account.&nbsp;<br /></h6>
+      {{! <h6 class="text-muted card-subtitle mb-2"><i
+          class="fa fa-bitcoin"
+          style="font-size: 80px;color: #ff9900;"
+        ></i><br />it's Safe and Fast...<br /></h6> }}
+
+      <form
+        action="/dashboard/deposit"
+        method="POST"
+        style="margin-top: 39px;margin-bottom: 44px;"
+      >
+        <div class="form-group">
+          <label style="font-size: 13px;">
+            Amount: $ USD<br />
+            <input
+              class="form-control"
+              type="number"
+              name="amount"
+              placeholder="$"
+              id="usdvalue"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label style="font-size: 13px;">
+            Amount: BTC<br />
+            <input
+              class="form-control"
+              type="number"
+              name="btc"
+              placeholder="0.00000000"
+              id="btcvalue"
+              step=".00000001"
+            />
+          </label>
+        </div>
+
+        <input type="hidden" name="currency" id="currency" value="USD" />
+        <div class="form-group"><button
+            class="btn btn-primary btn-block"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <div
+        class="alert"
+        role="alert"
+        style="padding-top: 0px;margin-bottom: 0px;"
+      >
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        ><span aria-hidden="true">×</span></button>
+        <span><br />Other deposit options we support<br /></span>
+
+        <br />
+
+        <a
+          href="https://www.zellepay.com/get-started"
+          class="btn btn-success btn-block"
+          style="background-color: #401fd4;"
+          target="_blank"
+        >Zelle</a>
+
+        <a
+          href="https://www.paypal.com/signin"
+          class="btn btn-success btn-block"
+          style="background-color: #0070BA;"
+          target="_blank"
+        >PayPal</a>
+
+        <a
+          href="https://cash.app"
+          class="btn btn-success btn-block"
+          style="background-color: #0BB634;"
+          target="_blank"
+        >CashApp</a>
+
+        <a href="mailto:{{websiteMail}}" class="btn btn-danger btn-block">Wire
+          Transfer</a>
+
+        <br />
+
+        <p>After making payment, send proof of payment to
+          <a href="mailto:{{websiteMail}}">{{websiteMail}}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('usdvalue').addEventListener('keyup', e => { const
+  btc_value = parseFloat(document.getElementById('usdvalue').value) / 19000.00;
+  document.getElementById('btcvalue').value = btc_value.toFixed(8); })
+  document.getElementById('btcvalue').addEventListener('keyup', e => { const
+  usd_value = parseFloat(document.getElementById('btcvalue').value) * 19000.00;
+  document.getElementById('usdvalue').value = usd_value.toFixed(2); })
+</script>

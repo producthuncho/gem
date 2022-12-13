@@ -1,0 +1,36 @@
+<script>
+    document.title = "Messages - BullishFXOptions";
+</script>
+<!-- Single pro tab review Start-->
+<div class="single-pro-review-area mt-t-30 mg-b-15">
+    <div class="container-fluid">
+        <div class="jumbotron" style="background-color: white;">
+            {{> _msg }}
+            <h3><i class="fa fa-envelope text-primary"></i> Messages from website visitors</h3>
+            <br><br>
+                    {{#if messages }}
+                    {{#each messages}}
+                    <div class="alert alert-info">
+                        <h5>Name: {{name}}</h5>
+                        <h5>Date: {{date}}</h5>
+                        <h5>Email: <a href="mailto:{{email}}">{{email}}</a></h5>
+                        <h5>Subject: {{subject}}</h5>
+                        <h5>Message: <br><br>{{message}}</h5>
+                        <a href="mailto:{{email}}" class="btn btn-primary">Reply <i class="fa fa-reply"></i></a>
+                        <form class="pull-right" action="/dashboard/manage/delete/message/{{_id}}/?_method=DELETE"
+                            method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                        </form>
+                    </div>
+                    {{/each}}
+                    {{else}}
+                    <div class="alert alert-warning">
+                        No recent messages from your website visitors.
+                    </div>
+                    {{/if}}
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+<section>
+    <h3 class="text-dark p-4"><i class="fa fa-lock"></i> Change Password</h3>
+    {{> _msg}}
+    <form action="/dashboard/profile/change-password" method="post">
+        <div class="row mb-3">
+
+            <div class="col-lg-12">
+               
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow mb-3">
+                            <div class="card-body">
+
+
+                                <div>
+                                    <div class="col">
+                                        <div class="form-group"><label for="password"><strong>Old Password</strong></label><input class="form-control" type="password"
+                                                name="oldPassword" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-group"><label for="password"><strong>New Password</strong></label><input class="form-control" type="password"
+                                                name="newPassword" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="form-group"><label for="password"><strong>Confirm New Password</strong></label><input class="form-control" type="password"
+                                                name="confirmNewPassword" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                         <div class="form-group"><button class="btn btn-success" type="submit"
+                                        name="profilesubmit">Save&nbsp;Settings</button></div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                          
+
+                        </div>
+
+                        </div>
+
+                        </div>
+
+                        </div>
+
+                         
+                                
+    </form>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Single pro tab review Start-->
+{{!-- <div class="single-pro-review-area mt-t-30 mg-b-15">
+    <div class="">
+        <div class="jumbotron" style="background-color: white;">
+            {{> _msg }}
+
+            <div class="row">
+                <div class="col-md-6" style="padding-bottom: 3em">
+                    <h4><i class="fa fa-user"></i> Profile</h4>
+                    <br><br>
+
+
+
+                    <form action="/dashboard/profile" method="POST" style="max-width: 600px">
+                        <div class="form-group">
+                            <label for="fn">First name</label>
+                            <input type="text" id="fn" name="firstname" class="form-control"
+                                value="{{ user.firstname }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ln">Last name</label>
+                            <input type="text" id="ln" name="lastname" class="form-control" value="{{ user.lastname }}"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="em">Email</label>
+                            <input type="email" id="em" name="email" class="form-control" value="{{ user.email }}"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" class="form-control"
+                                value="{{ user.country }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" value="{{ user.phone }}">
+                        </div>
+
+                        <button class="btn btn-primary">Update profile</button>
+                    </form>
+                </div>
+
+                <div class="col-md-6 bg-dark" id="password">
+                    <h4><i class="fa fa-lock"></i> Password</h4>
+                    <br><br>
+
+                    <form action="/dashboard/profile/change-password" method="POST">
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="old_password" placeholder="Old password"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="new_password" placeholder="New password"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="c_password" placeholder="Confirm password"
+                                required>
+                        </div>
+
+                        <button class="btn btn-danger">Change password</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> --}}

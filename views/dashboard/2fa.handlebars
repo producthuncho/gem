@@ -1,0 +1,71 @@
+<div class="">
+  <h3
+    style="font-weight: bold;"
+  >Secure Your Account</h3>
+  <div class="">
+
+      {{> _msg}}
+
+    <div
+      class="row d-xl-flex justify-content-xl-center align-items-xl-center"
+      style="background-color: #ffffff;"
+    >
+      <div
+        class="col bgb"
+        style="padding: 15px;height: 424px;min-width: 350px; box-sizing: border-box;"
+      >
+        <h2 style="color: rgb(255,255,255);font-weight: bold;">Google Two Factor
+          Authentication<br /></h2>
+        <p style="color: rgb(255,255,255);">Get Google Authenticator On Your
+          Phone<br /></p>
+        <ul class="list-inline" style="margin: 35px;">
+          <li class="list-inline-item"><a
+              href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en"
+              target="_blank"
+            ><img
+                class="img-fluid"
+                src="/account/android.png"
+                style="width: 125px;"
+              /></a></li>
+          <li class="list-inline-item"><a
+              href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8"
+              target="_blank"
+            ><img
+                class="img-fluid"
+                src="/account/iphone.png"
+                style="width: 125px;"
+              /></a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2 style="font-weight: bold;color: rgb(0,0,0);">Scan Barcode on App</h2><img
+          src="https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl=otpauth%3A%2F%2Ftotp%2Fjwesh%40gmail.com%3Fsecret%3Dnone%26issuer%3Dhttps%253A%252F%252Fbullishfxoptions.org"
+          style="width: 189px;"
+        />
+        <p style="color: rgb(0,0,0);">Add Manually 2FA Key: none</p>
+
+        <div class="form-input">
+          {{#if user.twoFA}}
+            <div class="a2z-button">
+              <button
+                type="submit"
+                name="submitact"
+                class="btn btn-success btn-lg disabled"
+              >2FA Activated!</button>
+            </div>
+          {{else}}
+            <form action="/dashboard/2fa" method="POST">
+              <div class="a2z-button">
+                <button
+                  type="submit"
+                  name="submitact"
+                  class="btn btn-danger btn-lg"
+                >Activate 2FA When Login</button>
+              </div>
+            </form>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

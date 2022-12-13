@@ -1,0 +1,231 @@
+<section>
+    <h3 class="text-dark p-4">Account Profile</h3>
+    {{> _msg}}
+    <form action="/dashboard/profile" method="post">
+        <div class="row mb-3">
+
+            <div class="col-lg-4" style="display: none;">
+                <div class="card mb-3">
+                    <div class="card-body text-center shadow"><img class="dimg rounded-circle mb-3 mt-4"
+                            src="/account/default.png?h=a0a7d00bcd8e4f84f4d8ce636a8f94d4" width="160" height="160">
+                        <div class="mb-3"><button class="btn btn-primary btn-sm" type="button">Change Photo<input
+                                    type="file" id="fileUploaded" style="width: 110px;" name="fileToUpload"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    const file = document.getElementById('fileUploaded');
+                    file.addEventListener('change', e => {
+                        document.querySelector('.dimg').src = file.value;
+                    })
+                </script>
+                {{!-- <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="text-primary font-weight-bold m-0">Account</h6>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="small font-weight-bold">Server migration<span class="float-right">20%</span></h4>
+                        <div class="progress progress-sm mb-3">
+                            <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                                style="width: 20%;"><span class="sr-only">20%</span></div>
+                        </div>
+                        <h4 class="small font-weight-bold">Payout Details (BTC)Address<span
+                                class="float-right">None</span>
+                        </h4>
+                        <div class="progress progress-sm mb-3">
+                            <div class="progress-bar bg-info" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                style="width: 80%;"><span class="sr-only">80%</span></div>
+                        </div>
+                        <h4 class="small font-weight-bold">Account setup<span class="float-right">Complete!</span></h4>
+                        <div class="progress progress-sm mb-3">
+                            <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0"
+                                aria-valuemax="100" style="width: 100%;"><span class="sr-only">100%</span></div>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+
+            <div class="col-lg-12">
+                {{!-- <div class="row mb-3 d-none">
+                    <div class="col">
+                        <div class="card text-white bg-primary shadow">
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <p class="m-0">Peformance</p>
+                                        <p class="m-0"><strong>65.2%</strong></p>
+                                    </div>
+                                    <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                </div>
+                                <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last
+                                    month</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-success shadow">
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <p class="m-0">Peformance</p>
+                                        <p class="m-0"><strong>65.2%</strong></p>
+                                    </div>
+                                    <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                </div>
+                                <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last
+                                    month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow mb-3">
+                            <div class="card-header py-3">
+                                <p class="text-primary m-0 font-weight-bold">User Settings</p>
+                            </div>
+                            <div class="card-body">
+
+
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="form-group"><label for="email"><strong>Email
+                                                    Address</strong></label><input class="form-control" type="email"
+                                                name="email" value="{{user.email}}" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="form-group"><label for="first_name"><strong>First
+                                                    Name</strong></label><input class="form-control" type="text"
+                                                name="firstname" value="{{user.firstname}}" required></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group"><label for="last_name"><strong>Last
+                                                    Name</strong></label><input class="form-control" type="text"
+                                                name="lastname" value="{{user.lastname}}" required></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow">
+                            <div class="card-header py-3">
+                                <p class="text-primary m-0 font-weight-bold">Contact Settings</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group"><label for="address"><strong>Address</strong></label><input
+                                        class="form-control" type="text" value="{{user.country}}" name="country"></div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="form-group"><label for="phone"><strong>Phone</strong></label><input
+                                                class="form-control" type="text" value="{{user.phone}}" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group"><label for="state"><strong>State</strong></label><input
+                                                class="form-control" type="text" name="state">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="form-group"><label for="city"><strong>City</strong></label><input
+                                                class="form-control" type="text" name="city"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group"><label
+                                                for="country"><strong>Country</strong></label><input
+                                                class="form-control" type="text" value="{{user.country}}"
+                                                placeholder="usa" name="jas"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group"><button class="btn btn-primary btn-sm" type="submit"
+                                        name="profilesubmit">Save&nbsp;Settings</button></div>
+    </form>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Single pro tab review Start-->
+{{!-- <div class="single-pro-review-area mt-t-30 mg-b-15">
+    <div class="">
+        <div class="jumbotron" style="background-color: white;">
+            {{> _msg }}
+
+            <div class="row">
+                <div class="col-md-6" style="padding-bottom: 3em">
+                    <h4><i class="fa fa-user"></i> Profile</h4>
+                    <br><br>
+
+
+
+                    <form action="/dashboard/profile" method="POST" style="max-width: 600px">
+                        <div class="form-group">
+                            <label for="fn">First name</label>
+                            <input type="text" id="fn" name="firstname" class="form-control"
+                                value="{{ user.firstname }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ln">Last name</label>
+                            <input type="text" id="ln" name="lastname" class="form-control" value="{{ user.lastname }}"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="em">Email</label>
+                            <input type="email" id="em" name="email" class="form-control" value="{{ user.email }}"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" class="form-control"
+                                value="{{ user.country }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" value="{{ user.phone }}">
+                        </div>
+
+                        <button class="btn btn-primary">Update profile</button>
+                    </form>
+                </div>
+
+                <div class="col-md-6 bg-dark" id="password">
+                    <h4><i class="fa fa-lock"></i> Password</h4>
+                    <br><br>
+
+                    <form action="/dashboard/profile/change-password" method="POST">
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="old_password" placeholder="Old password"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="new_password" placeholder="New password"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="c_password" placeholder="Confirm password"
+                                required>
+                        </div>
+
+                        <button class="btn btn-danger">Change password</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> --}}

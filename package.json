@@ -1,0 +1,39 @@
+{
+  "name": "supercryptocash",
+  "version": "1.0.0",
+  "description": "cryptocurrency, forex",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "cryptocurrency"
+  ],
+  "author": "Neo",
+  "license": "MIT",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "axios": "^1.2.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.32.0",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.0",
+    "handlebars": "^4.5.3",
+    "helmet": "^3.21.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.2",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^6.6.1",
+    "particles.js": "^2.0.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,76 @@
+<div class="d-xl-flex justify-content-xl-center align-items-xl-center">
+    <div class="card" style="background-color: #fff; max-width: 650px;">
+        <div class="card-body text-center">
+            <h4 class="text-center card-title"
+                style="font-weight: bold;font-family: 'Baloo Bhai', cursive;">MAKE A WITHDRAWAL
+                REQUEST<br></h4>
+            <h6 class="text-muted card-subtitle mb-2" style="">{{websiteName}} Recommend the use of
+                Bitcoin&nbsp;<br></h6>
+                <br>
+
+            <h6 class="text-muted card-subtitle mb-2"><i class="fab fa-bitcoin"
+                    style="font-size: 80px;color: #ffa600;"></i><br>it's Safe and Fast...<br></h6>
+
+            <div class="alert alert-info" role="alert"><span>Withdrawal request will be approved within 24hrs, Contact
+                    us: {{websiteMail}}<br></span></div>
+
+            {{> _msg }}
+
+            <form accept="/dashboard/withdraw" method="post" style="margin-top: 39px;margin-bottom: 44px;">
+                <div class="form-group"><small class="form-text text-muted" style="">Your Account balance
+                        is: ${{#if user.balance}}{{user.balance}}{{else}}0.00{{/if}}<br></small></div>
+                        
+                {{!-- <div class="form-group">
+                    <ul class="list-inline">
+                        <li class="list-inline-item" data-toggle="tooltip" data-bs-tooltip="" title="Bitcoin">
+                            <input type="radio" value="Bitcoin" name="paytype"><label><i class="fa fa-bitcoin"
+                                    style="font-size: 33px;">
+                                </i></label>
+                        </li>
+
+                        <li class="list-inline-item" data-toggle="tooltip" data-bs-tooltip="" title="Card"><input
+                                type="radio" name="paytype" value="Card"><label><i class="fa fa-credit-card-alt"
+                                    style="font-size: 33px;"></i></label></li>
+                        <li class="list-inline-item" data-toggle="tooltip" data-bs-tooltip="" title="WesternUnion">
+                            <input type="radio" name="paytype" value="WesternUnion"><label style="font-size: 33px;"><img
+                                    src="/account/westernunion.png?h=103ad2a082215600d71951a49017e895"
+                                    style="width: 81px;"></label>
+                        </li>
+                        <li class="list-inline-item" data-toggle="tooltip" data-bs-tooltip="" title="MoneyGram"><input
+                                type="radio" name="paytype" value="MneyGram"><label style="font-size: 33px;"><img
+                                    src="/account/moneygram.png?h=134bc2bf1973b26ab8f7ea568b106cd8"
+                                    style="width: 68px;"></label></li>
+                        <li class="list-inline-item" data-toggle="tooltip" data-bs-tooltip="" title="Others"><input
+                                type="radio" name="paytype" value="Others"><label
+                                style="font-size: 20px;">Others</label></li>
+                    </ul>
+                </div> --}}
+
+                <div class="form-group"><label style="font-size: 13px;">Amount: $<br><input class="form-control"
+                            type="number" name="amount" placeholder="$" required></label> <br>
+                </div>
+
+                <div class="form-group"><label style="font-size: 13px;">Your BTC address:<br><input class="form-control"
+                            type="text" name="wallet" placeholder="Wallet" value="{{user.wallet}}" required>
+                    </label>
+                </div>
+
+                <div class="form-group"><label style="font-size: 13px;">Enter security code:<br><input
+                            class="form-control" type="text" name="security_code" placeholder="######" required>
+                    </label><br>
+                    <span>Don't have security code? Contact <a
+                            href="mailto:{{websiteMail}}">{{websiteMail}}</a></span>
+                </div>
+
+                <div class="form-group"><button class="btn btn-success" type="submit" name="payoutsave">Submit</button>
+                </div>
+            </form>
+            <div class="alert alert-secondary" role="alert" style="padding-top: 0px;margin-bottom: 0px;"><button
+                    type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">×</span></button><span>If you are interested in learning more about the
+                    withdrawal process or <br>have an issue please contact support; {{websiteMail}} to get
+                    a<br>
+                    detailed description of the process<br></span></div>
+        </div>
+    </div>
+</div>

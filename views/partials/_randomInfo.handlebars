@@ -1,0 +1,87 @@
+<style>
+    .rand-info-container {
+        position: fixed;
+        z-index: 9999;
+        bottom: 1em;
+        left: 0;
+        max-width: 300px;
+        margin: 1em;
+        transition: all 1s linear;
+    }
+
+    .rand-info-container .alert {
+        transition: all 1s linear;
+    }
+
+    @keyframes slideIn {
+        0% {
+            margin-bottom: -100%;
+        }
+
+        100% {
+            margin-top: 1em;
+        }
+    }
+
+    .rand-info-container.slide-in {
+        animation: slideIn 1s linear;
+    }
+
+    @keyframes slideOut {
+        0% {
+            margin-bottom: 1em;
+        }
+
+        100% {
+            margin-bottom: -100%;
+        }
+    }
+
+    .rand-info-container.slide-out {
+        animation: slideOut 1s linear
+    }
+
+    .d-none {
+        margin-bottom: -100%;
+    }
+</style>
+
+<section class="rand-info-container d-none">
+    <h4 class="alert alert-info"><i class="fa fa-info-circle"></i>
+        <span class="rand-info"></span>
+    </h4>
+</section>
+
+<script>
+
+    const randomInfo = ["Someone from Mexico just Withdrew $2000",
+        "Someone from Chicago just Withdrew $1000", "Someone from South Africa just Withdrew $1500",
+        "Someone from United Kingdom just Deposited $5000", 
+        "Someone from San Francisco just registered", "Someone from South Africa just Withdrew $6000",
+  "Someone from Mexico just Deposited $2500", "Someone from Chicago just Deposited $2000", "Someone from San Francisco just Deposited $7000", 
+  "Someone from Mexico just registered", "Someone from South Africa just registered" ]; 
+  
+  
+
+    window.addEventListener('load', () => {
+        const _$ = el => document.querySelector(el); 
+
+        setInterval(() => {
+            let randByte =  Math.floor(Math.random() * randomInfo.length);
+            
+                _$('.rand-info-container').classList.remove('d-none');
+                _$('.rand-info-container').classList.add('slide-in');
+                _$('.rand-info').innerText = randomInfo[randByte];
+            }, 4000)
+    })
+
+    window.addEventListener('load', () => {
+        const _$ = el => document.querySelector(el); 
+        
+        setInterval(() => {
+                _$('.rand-info-container').classList.add('d-none');
+                _$('.rand-info-container').classList.add('slide-out');
+            }, 12000)
+    })
+
+</script>

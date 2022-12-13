@@ -1,0 +1,179 @@
+<div
+  class="product-sales-area"
+  style="background: #000011; padding-bottom: 1em; padding-top: 3em;"
+>
+  <div class="container-fluid">
+
+    <div class="row" style="padding-right: 1em; padding-left: 1em;">
+      <div
+        class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+        style="padding: 0; max-width: 100%; overflow-x: hidden; background: #000011;"
+      >
+        <h1 style="padding-bottom: 0.5em;">Dashboard</h1>
+
+        {{#if user.control}}{{else}}
+          {{#if user.is_verified}}
+            <div class="alert" style="background: #D2F4E8;">
+              <h3>Account verified!</h3>
+              {{! <p>Make your first deposit to complete your account verification.</p> }}
+              <br />
+              <p>
+                <a href="/dashboard/deposit" class="btn btn-success">Make
+                  Deposit</a>
+              </p>
+            </div>
+
+          {{else}}
+            <div class="alert" style="background: #D2F4E8;">
+              <h3 class="text-danger">Verify Your Account To Start Earning</h3>
+              <p style="color: #000;">Upload any of the (International Passport,
+                Driver's Licence, Utility Bill)
+              </p>
+
+              <hr />
+
+              {{! <p style="color: #000;">We will review your document and approve your account as soon as
+                        possible.
+                    </p> }}
+
+              <p style="color: #000;">Click the upload button below and send
+                your attachment to our Company Mail to verify your account.</p>
+              <br />
+
+              <p>
+                <a href="mailto:{{websiteMail}}" class="btn btn-warning">Upload
+                  files</a>
+              </p>
+            </div>
+          {{/if}}
+        {{/if}}
+
+        <style>
+          @media (max-width: 760px) { .mb-flex-row { flex-direction: column; } }
+        </style>
+
+        <div
+          style="display: flex; justify-content: center; align-items: center; justify-items: stretch; box-sizing: border-box"
+          class="mb-flex-row"
+        >
+          <div
+            style="position: relative; width: 100%; margin: 1em; padding: 1em; height: 100px; background: ghostwhite; border-radius: 10px; border-left: 2px solid orange;"
+          >
+            <h5 class="text-primary">BALANCE</h5>
+            <h3>${{user.balance}}</h3>
+
+            <img
+              src="/icons/icon-save.png"
+              width="50"
+              style="position: absolute; right: 1em; top: 1em;"
+              alt=""
+            />
+          </div>
+          <div
+            style="position: relative; width: 100%; margin: 1em; padding: 1em; height: 100px; background: ghostwhite; border-radius: 10px; border-left: 2px solid orange;"
+          >
+            <h5 class="text-primary">DEPOSIT</h5>
+            <h3>
+              <a
+                href="/dashboard/deposit"
+                class="btn btn-primary btn-sm"
+              >Deposit now</a>
+            </h3>
+
+            <img
+              src="/icons/icon-deposit.png"
+              width="50"
+              style="position: absolute; right: 1em; top: 1em;"
+              alt=""
+            />
+          </div>
+          <div
+            style="position: relative; width: 100%; margin: 1em; padding: 1em; height: 100px; background: ghostwhite; border-radius: 10px; border-left: 2px solid orange;"
+          >
+            <h5 class="text-primary">WITHDRAW</h5>
+            <h3>
+              <a
+                href="/dashboard/withdraw"
+                class="btn btn-primary btn-sm"
+              >Withdraw now</a>
+            </h3>
+
+            <img
+              src="/icons/icon-withdraw.png"
+              width="50"
+              style="position: absolute; right: 1em; top: 1em;"
+              alt=""
+            />
+          </div>
+          <div
+            style="position: relative; width: 100%; margin: 1em; padding: 1em; height: 100px; background: ghostwhite; border-radius: 10px; border-left: 2px solid orange;"
+          >
+            <h5 class="text-primary">PROFILE</h5>
+            <h3>
+              <a href="/dashboard/profile" class="btn btn-primary btn-sm">Update
+                profile</a>
+            </h3>
+
+            <img
+              src="/icons/icon-user.png"
+              width="50"
+              style="position: absolute; right: 1em; top: 1em;"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <script src="https://s3.tradingview.com/tv.js"></script>
+        <script>
+          new TradingView.widget( { "width": "100%", "height": 500, "symbol":
+          "FX:EURUSD", "timezone": "Etc/UTC", "theme": "dark", "style": "1",
+          "locale": "en", "toolbar_bg": "#f1f3f6", "enable_publishing": false,
+          "withdateranges": true, "range": "ytd", "allow_symbol_change": true,
+          "details": true, "hotlist": true, "calendar": true, "news": [
+          "stocktwits" ], "studies": [ "MACD@tv-basicstudies",
+          "MASimple@tv-basicstudies" ], "container_id": "tradingview_959e6" } );
+        </script>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <br />
+        <div
+          class="white-box analytics-info-cs mg-b-10 res-mg-b-30 res-mg-t-30 table-mg-t-pro-n tb-sm-res-d-n dk-res-t-d-n"
+        >
+          <h3 class="box-title">Current Earnings</h3>
+          <ul class="list-inline two-part-sp">
+            <li>
+              <div id="sparklinedash"></div>
+            </li>
+            <li class="text-right sp-cn-r"><i
+                class="fa fa-level-up"
+                aria-hidden="true"
+              ></i>
+              <span>$</span><span
+                class="counter text-success"
+              >{{user.balance}}</span>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="white-box analytics-info-cs mg-b-10 res-mg-b-30 tb-sm-res-d-n dk-res-t-d-n"
+        >
+          {{#if user.control}}
+            <a href="/dashboard/manage"><button
+                type="button"
+                class="btn btn-danger"
+              >Manage</button></a>
+          {{else}}
+            <a href="/dashboard/withdraw"><button
+                type="button"
+                class="btn btn-primary"
+              >Withdraw</button></a>
+            <a href="/dashboard/deposit"><button
+                type="button"
+                class="btn btn-danger"
+              >Deposit</button></a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

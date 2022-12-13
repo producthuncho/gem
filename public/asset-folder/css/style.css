@@ -1,0 +1,1384 @@
+/*creating css custom font for raisonne*/
+@font-face {
+  font-family: "raisonne";
+  src: url("/asset-folder/webfonts/raisonne-demibold.ttf");
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url("/asset-folder/webfonts/Orbitron.ttf");
+}
+@font-face {
+  font-family: "Precious";
+  src: url("/asset-folder/webfonts/Precious.ttf");
+}
+@import url(/asset-folder/externala182.html?link=http://db.onlinewebfonts.com/c/15a9075ddf4ff1158eb03abbc873a3a4?family=Frank-Light);
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  font-family: Frank-Light;
+  font-size: 0.9em;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background: #222941;
+  color: #fff;
+}
+a {
+  text-decoration: none !important;
+  color: #efefef;
+  transition: 0.2s ease-in-out;
+}
+a:hover {
+  color: #52afee;
+}
+.p-20 {
+  padding: 20px;
+}
+.m-20 {
+  margin: 20px 0;
+}
+
+/*color*/
+.gold {
+  color: #e9d16f;
+}
+.btcwdgt .btcwdgt-footer a.logo {
+  display: none !important;
+}
+
+.col-f-nav {
+  transition: 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.nav-back {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/*Trade widge styling */
+.tradingview-widget-copyright {
+  display: none;
+}
+
+/*styling to disable padding on the container-fluid*/
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/*end */
+
+.col-icon {
+  color: #52afee;
+  font-size: 1em;
+}
+
+/*this is the styling of the navigation of the drop down*/
+@media (min-width: 992px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+/* styling of the navigation menu */
+#navBar {
+  position: absolute;
+  z-index: 100000000000;
+}
+.navbar-toggler {
+  display: none;
+}
+.float-right {
+  float: right;
+}
+
+nav ul li a {
+  color: #fff !important;
+  font-weight: 600;
+  font-family: raleway;
+  font-size: 0.8em;
+  text-align: center;
+}
+nav ul li a:hover {
+  color: #52afee !important;
+}
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.dropdown-menu {
+  -webkit-box-shadow: 0 7px 20px rgba(85, 85, 85, 0.16); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 0 7px 20px rgba(85, 85, 85, 0.16); /* Firefox 3.5 - 3.6 */
+  box-shadow: 0 7px 20px rgba(85, 85, 85, 0.16); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  border: 0 !important;
+}
+.dropdown-item:hover {
+  color: #52afee !important;
+}
+.drop-icon-left {
+  display: none;
+  transition: 0.2s ease-in-out;
+}
+
+/*-----------------styling for the brand--------------------*/
+.brand {
+  width: 8em;
+  float: left;
+  position: relative;
+  z-index: 3;
+}
+/*  top contact us number ===*/
+
+.top-signup,
+.top-login {
+  padding: 0px 25px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  font-size: 15px;
+  line-height: 2;
+  margin: 10px 1px;
+}
+.top-signup:hover {
+  background: #000;
+
+  /*color: #52afee;*/
+}
+.top-login:hover {
+  border-bottom: solid 2px #52afee;
+  border-radius: 0 !important;
+  color: #fff;
+}
+.top-signup {
+  color: #fff;
+  background: #52afee;
+}
+.top-login {
+  color: #fff;
+}
+.top-contact-wrap {
+  padding: 10px;
+}
+/*-----------this styling is for the select language */
+.custom-select {
+  background: rgba(0, 0, 0, 0.9);
+  color: #52afee;
+  border-radius: 5px;
+  margin: 11px;
+  float: right;
+  border: 1px solid #52afee;
+  padding: 0 20px;
+}
+.custom-select-m {
+  display: none;
+}
+
+/*styling for the slider */
+
+.single-item {
+  color: #fff;
+}
+.slider-li li {
+  list-style: none;
+}
+
+.slider-img1,
+.slider-img2,
+.slider-img3 {
+  overflow: hidden;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  padding: 8em 6em;
+  height: 100vh !important;
+}
+
+.slider-img1 {
+  background-image: url("/asset-folder/images/background2.jpg");
+}
+.slider-img2 {
+  background-image: url("/asset-folder/images/slider/slider2.jpg");
+}
+.slider-img3 {
+  background-image: url("/asset-folder/images/slider/slider3.jpg");
+}
+
+.slide-h1 {
+  position: relative;
+  font-size: 40px;
+  padding: 1em 0;
+}
+.slider-img1 p,
+.slider-img2 p,
+.slider-img3 p {
+  font-size: 1.6em;
+}
+/*this is the design of the play button */
+.play-btn {
+  border-radius: 200px;
+  border: 1px #fff solid;
+  width: 40px;
+  padding: 10px;
+  background: none;
+}
+.learn-btc {
+  width: 300px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  float: left;
+  margin: 5px 0;
+  font-weight: 600;
+}
+.learn-btc span,
+.view-vid span {
+  line-height: 3;
+  padding: 0 5px;
+}
+.view-vid {
+  width: 300px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px auto;
+  font-weight: 600;
+}
+
+.create-acc {
+  width: 200px;
+  padding: 10px;
+  height: 50px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden !important;
+  float: left;
+  margin: 5px;
+  font-weight: 600;
+}
+.c-sign-up {
+  background: #52afee;
+}
+.c-sign-up:hover {
+  background: #178cdb;
+}
+
+.c-sign-in {
+  background: #3e4250;
+}
+.c-sign-in:hover {
+  background: transparent;
+  border: 2px solid #3e4250;
+}
+
+.create-acc p {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 5px 20px;
+}
+
+.abt-us-txt {
+  padding: 10em 3em;
+  color: #fff;
+  text-align: center;
+}
+
+/* ====================================styling for the how it works section =========================================== */
+.how-it-work {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 0 0 20px 0;
+}
+
+/* ====================================styling for the how it works section =========================================== */
+
+/* =============================================styling for feature cards ============================================= */
+.card-layer {
+  display: flex;
+  position: relative;
+  height: 360px;
+  -webkit-box-pack: center;
+}
+.ft-card-1,
+.ft-card-2,
+.ft-card-3 {
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+  height: 381px;
+  background-size: 100% !important;
+}
+.ft-card-1 {
+  left: 70px;
+  width: 429px;
+  position: relative;
+  background: url("/asset-folder/images/features-1.png");
+}
+.ft-card-2 {
+  position: relative;
+  width: 431px;
+  left: 40px;
+  background: url("/asset-folder/images/features-2.png");
+}
+.ft-card-3 {
+  width: 469px;
+  position: relative;
+  background: url("/asset-folder/images/features-3.png");
+}
+
+/* =============================================styling for feature cards ============================================= */
+
+/* ======================================styling for the feature section ============================================== */
+
+.features-list li {
+  list-style: none;
+}
+
+.features-list li::before {
+  content: "";
+  width: 7px;
+  min-width: 7px;
+  height: 7px;
+  position: relative;
+  top: 7px;
+  margin: 0 10px 1px;
+  border-radius: 100%;
+  background-image: radial-gradient(#3facff 50%, #259efa 100%);
+  box-shadow: 0 3px 10px 0 #0048b5;
+  display: block;
+  float: left;
+}
+/* ======================================styling for the feature section ============================================== */
+
+/*====================================================styling of the first content========================================== */
+.trade-instr {
+  padding: 20px;
+  box-shadow: 0 7px 20px rgba(85, 85, 85, 0.16);
+  margin: 10px 0;
+}
+.table th {
+  border: none !important;
+}
+.table td {
+  border: 1px solid #fff !important;
+}
+.m-4-neg {
+  margin: -4px 10px 0 0;
+}
+/*====================================================end styling of the first content========================================== */
+
+/*styling for read more in the modal */
+.eng-read-more {
+  width: 150px;
+  border: 2px solid #52afee;
+  padding: 10px;
+  margin: -1em auto 0 auto;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.eng-read-more:hover {
+  background: #52afee;
+  border-radius: 30px;
+  color: #fff;
+}
+/*this is the stying of the second contentt*/
+
+.big {
+  width: 70px;
+  margin: 0 auto;
+}
+/*this is the start of the abt section*/
+
+.abt-body > div h2 {
+  padding: 40px;
+  font-weight: 900;
+  font-size: 3em;
+  text-align: center;
+  color: #fff;
+}
+
+.p-chart {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 35px 20px;
+  height: 50vh;
+}
+.p-text {
+  padding: 32px 0;
+  font-size: 1.2em;
+  line-height: 2;
+}
+
+.abt-body {
+  background-image: url(/asset-folder/images/profit-bg.jpg);
+  padding: 20px;
+  background-position: center;
+  background-size: cover;
+}
+.abt-body::before {
+  position: absolute;
+  content: "";
+  background-image: url(/asset-folder/images/icon/vip-black-33.html);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  margin-top: -20px;
+  right: 0;
+  width: 100px;
+  height: 100px;
+}
+
+/*plan styling starts here */
+
+.col-plan-inner {
+  width: 100%;
+  background: #01163d;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.col-plan-head {
+  text-align: center;
+  color: #fff;
+  background: #52afee;
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.col-plan-inner p {
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
+}
+.plan-text::after {
+  content: "";
+  background: #fff;
+  display: block;
+  height: 1px;
+  width: 250px;
+  margin: 5px auto;
+}
+.black {
+  color: #000;
+}
+.ash-bg {
+  background: rgba(0, 0, 0, 0.15);
+}
+.lite-ash {
+  color: #a9b5cb;
+}
+.lite-ash-bg {
+  background: rgba(0, 0, 0, 0);
+}
+.green {
+  color: #52afee;
+}
+.green-bg {
+  background: #21ae8c;
+}
+.lt-blue {
+  color: #52afee;
+}
+.orange {
+  color: #52afee;
+}
+.min-price {
+  color: #fff;
+  text-align: center;
+  padding: 2px 10px;
+}
+
+/*styling for read more in the modal */
+.plan-signup {
+  width: 180px;
+  border: 2px solid #52afee;
+  padding: 10px;
+  margin: 0 auto 10px auto;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+}
+.plan-signup:hover {
+  border-radius: 0;
+  color: #52afee;
+}
+
+/*.arrow-down{
+	width: 0;
+	height: 0;
+	border-left: 145px solid transparent;
+	border-right: 145px solid transparent;
+	border-top: 40px solid #f00;
+	margin-top: -1.1em;
+}*/
+
+/* this is for the embedded video */
+
+div.desktop-wrapper {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+}
+div.desktop-wrapper iframe {
+  box-sizing: border-box;
+  background: url(/asset-folder/images/desktop.html) center center no-repeat;
+  background-size: contain;
+  padding: 3.4% 10.8% 18.6%; /* 11.9% 15.5% 14.8% */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*=======================================styling for best OPTION===================================================================*/
+.best-option {
+  height: auto;
+  background: url(/asset-folder/images/b-opt.html) no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 0 0 2em 0;
+}
+.col-testimony {
+  height: auto;
+  background: url(/asset-folder/images/background2.jpg) center fixed no-repeat;
+  background-size: cover;
+  padding: 30px;
+}
+
+/*===================================================This is the styling of the payment method*/
+.col-pay-meth {
+  padding: 20px;
+}
+.col-pay-meth h5 {
+  padding: 30px 0 0 10px;
+  font-weight: 800;
+  color: #fff;
+  font-size: 2.5em;
+}
+
+.col-pay-meth p {
+  font-size: 1.1em;
+  padding: 10px;
+}
+/*==============================styling for count-up.js==================================================================*/
+.col-count-up {
+  width: 10em;
+  height: 10em;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin: 6px auto;
+}
+.count-up-icon {
+  color: #fff;
+  font-size: 5em;
+  margin: 0.2em 0.3em;
+}
+.t-u {
+  text-align: center;
+  font-size: 1.3em;
+}
+.t-i {
+  margin: 0.2em 0.5em;
+}
+/* this is for the account comparisms================================================================ */
+.about-main-title {
+  color: #fff;
+  line-height: 13;
+  text-align: center;
+}
+/*=======================================styling for TRADE OPTION===================================================================*/
+.trade-option {
+  background: #cccccc;
+}
+.trade-option-1,
+.trade-option-2 {
+  border-radius: 1%;
+  margin: 20px auto;
+  color: #fff;
+  font-size: 0.8em;
+  overflow: hidden;
+}
+.trade-option-1 h4 {
+  padding: 20px;
+}
+
+.trade-option-1 {
+  background: rgba(0, 0, 0, 0.15);
+}
+.trade-option-2 {
+  background: #486271;
+}
+.trade-option-1 h5 {
+  padding: 8px;
+}
+.t-color-1 {
+  background: #52afee;
+}
+.green {
+  color: #1fb05c;
+}
+
+.content {
+  text-align: left !important;
+}
+
+/*=============SLICK============*/
+.col-testimony-bg {
+  background: linear-gradient(rgba(4, 30, 55, 0.7), rgba(4, 30, 55, 0.7)),
+    url(/asset-folder/images/slider/slider3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  color: #fff;
+}
+.col-test-card {
+  padding: 30px;
+  margin: 0 auto;
+}
+.col-test-bg {
+  width: 30%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #a9b5cb;
+  background: rgba(0, 0, 0, 0.15);
+  min-height: 190px !important;
+}
+
+.mum {
+  margin: 0 15px;
+}
+.col-test-bg h5 {
+  font-family: precious;
+}
+/*this is to change the color of the slick dots */
+.slick-dots li button:before {
+  color: #fff !important;
+}
+
+/*==================================footer==============================================*/
+
+footer {
+  background: url(/asset-folder/images/footer.html);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #a9b5cb;
+}
+.footer-list {
+  padding: 0 80px;
+}
+
+.footer-logo {
+  width: 150px;
+}
+footer hr {
+  background: #3c3c3c;
+}
+.footer-link a {
+  font-size: 0.7em;
+  padding: 10px;
+  text-align: center;
+}
+.footer-link span {
+  font-size: 0.7em;
+}
+.last-widget {
+  position: sticky;
+  z-index: 10;
+  bottom: 0;
+}
+
+/*=======================================CRYPTO==============================================*/
+.t-h2 {
+  font-size: 4em;
+}
+.col-crypto {
+  padding: 50px;
+}
+.col-crypto-foot {
+  background: #d4d2d2;
+  padding: 20px;
+}
+
+.crypto-list li {
+  list-style: none;
+  padding: 10px;
+}
+.plan-signup-crypto {
+  width: 140px;
+  border-radius: 40px;
+  background: #52afee;
+  position: relative;
+  padding: 12px 0 !important;
+  color: #fff;
+  overflow: hidden;
+}
+
+.plan-signup-crypto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(225, 225, 225, 0.3),
+    transparent
+  );
+  transition: all 650ms;
+}
+.plan-signup-crypto:hover::before {
+  left: 100%;
+}
+.t-p {
+  font-size: 1.1em;
+  line-height: 2.1;
+}
+.crypto-pno {
+  font-size: 1.1em;
+}
+
+.crypto-cat {
+  padding: 30px;
+}
+.crypto-cat > a > div {
+  width: 90%;
+  padding: 10px 15px;
+  background: #efefef;
+  font-size: 1.1em;
+  margin: 5px;
+  color: #404040;
+}
+.crypto-cat > a > div:hover {
+  background: inherit;
+  border-left: solid 4px #52afee;
+}
+.current-crypto {
+  width: 90%;
+  padding: 8px 15px;
+  background: #52afee;
+  font-size: 1.1em;
+  margin: 5px;
+  color: #fff;
+}
+.crypto-form {
+  background: url(/asset-folder/images/benefits.html);
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+}
+.pad-55 {
+  padding: 55px;
+}
+/*-================ styling of about us page ===========================*/
+.abt-lp {
+  background: url(/asset-folder/images/about/bg-about-header.html);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+.abt-lp h1 {
+  /* text-transform: uppercase; */
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+  line-height: 10;
+}
+.abt-building {
+  width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: -40px;
+}
+.abt-us-write {
+  width: 400px;
+}
+.heading-about::before,
+.our-value::before {
+  content: "";
+
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 50px;
+  height: 50px;
+  float: left;
+  position: relative;
+  margin: 0 10px;
+}
+.abt-number {
+  width: 40px;
+  font-size: 32px;
+  margin: 0 20px;
+  float: left;
+  line-height: 80px;
+}
+.abt-us-2 {
+  line-height: 1.85;
+  letter-spacing: 0.7px;
+}
+.heading-about::before {
+  background-image: url("/asset-folder/images/about/icons/about.svg");
+}
+.our-value::before {
+  background-image: url("/asset-folder/images/about/icons/values.svg");
+}
+.our-team-p::after {
+  content: "";
+  display: block;
+  width: 50px;
+  padding: 1.5px;
+  background: #52afee;
+  margin: 20px auto;
+}
+.cert {
+  width: 50vw;
+  margin: 20px auto;
+}
+.breadcrumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+.breadcrumb-item {
+  color: #a9b5cb;
+}
+
+/*=======================styling for the FAQ page============================*/
+.cross-broder {
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  border-radius: 100%;
+  border: #52afee solid 2px;
+  overflow: hidden;
+  float: left;
+}
+.card {
+  background: rgba(0, 0, 0, 0.15);
+  color: #a9b5cb;
+}
+.cross {
+  background: #52afee;
+  height: 20px;
+  position: relative;
+  width: 3px;
+  top: -10px;
+}
+.cross::after {
+  content: "";
+  background: #52afee;
+  height: 2.5px;
+  left: -9px;
+  position: absolute;
+  top: 8px;
+  width: 20px;
+}
+
+/*=====================================contact us ========================*/
+.bg-contact-us,
+.bg-market {
+  height: 40vh;
+  position: relative;
+  z-index: 0;
+  background-position: center;
+  background-size: cover;
+  margin: 0 0 10vh 0;
+}
+.bg-contact-us {
+  background: url(/asset-folder/images/bg-contact.jpg);
+}
+.bg-market {
+  background: url(/asset-folder/images/slider/slider3.jpg);
+}
+.col-contact-side {
+  margin: 20px 0 0 0;
+}
+.col-contact-side-i {
+  font-size: 3em;
+  padding-top: 10px;
+}
+.col-contact-side b {
+  padding-left: 45px;
+}
+.col-contact-side p {
+  padding-left: 90px;
+}
+.flying-man {
+  width: 40vh;
+  margin: 50px 20px;
+  float: right;
+}
+
+/*=============================styling for sign-up section in the area ====================================*/
+
+.sign-up-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/asset-folder/images/testimony.jpg);
+  background-position: center;
+  background-size: cover;
+  height: auto;
+}
+.mumu {
+  background: red;
+}
+.btn-submit {
+  width: 10em;
+  background: #52afee;
+  border: 0 solid;
+}
+.col-form {
+  margin: 2px auto;
+  padding: 30px;
+}
+.form-main-sec {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/asset-folder/images/8.html);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 3em;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.8);
+}
+.sign-up-col-txt p,
+h3 {
+  text-align: left;
+}
+#message {
+  width: 100%;
+  margin: 20px auto;
+  color: #fff;
+}
+.form-action {
+  width: 80%;
+  height: 10vh;
+  margin: 3px auto;
+  color: #fff;
+}
+.cen {
+  text-align: center;
+}
+.white {
+  color: #fff;
+}
+
+.last-section {
+  background: #000;
+  padding: 2em;
+  color: #fff;
+}
+.raise {
+  text-transform: uppercase;
+}
+.lst-signup {
+  margin: 0 auto;
+  padding: 5px 3px 0 0;
+  width: 12em;
+  border: 1px solid #52afee;
+  color: #52afee;
+  border-radius: 20px;
+  transition: 0.4s ease-in-out;
+}
+.lst-signup h6 {
+  text-align: center;
+}
+.lst-signup:hover {
+  background: #52afee;
+  color: #fff;
+}
+.discliamers {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.upload-image-con {
+  border-radius: 20px;
+  width: 30vh;
+  margin: auto;
+}
+.upload-image-con img {
+  border-radius: 100%;
+}
+
+.dropdown-menu {
+  background: #212529 !important ;
+}
+.clear-fix {
+  clear: both;
+  padding: 2px;
+}
+/*==============================styling of the register page of the website ==============================*/
+.register-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/asset-folder/images/slider/slider3.jpg);
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  padding: 30px;
+}
+.reg-first-col {
+  padding: 13em 5em;
+  color: #fff;
+}
+.option-drop {
+  height: 100vh !important;
+  overflow-y: scroll;
+}
+.reg-form {
+  padding: 10em 5em;
+  color: #fff;
+}
+.reg-box {
+  background: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/asset-folder/images/8.html);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 100%;
+}
+.input-box {
+  letter-spacing: 1px;
+  border: none;
+  border-bottom: 1px solid #1e90ff;
+  outline: none !important;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  color: #fff;
+  background: transparent;
+  padding: 10px 0;
+  position: relative;
+}
+.input-box label {
+  position: absolute;
+}
+
+label {
+  margin-top: -3em;
+  color: #fff;
+  display: block;
+  transition: 0.3s ease-in-out;
+  margin-top: -2em;
+  pointer-events: none;
+}
+.input-box:focus ~ label,
+.input-box:valid ~ label {
+  font-size: 12px;
+  color: #4cb1ff;
+  margin-top: -4em;
+}
+
+.input-wrap {
+  height: 52px;
+}
+
+/* The container must be positioned relative: */
+.reg-custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.reg-custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #fff;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #1e90ff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #1e90ff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #1e90ff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: #1e90ff;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.ssl {
+  margin-top: -5px;
+}
+.display-none {
+  display: none;
+}
+
+.abt-img {
+  width: 210px;
+  border-radius: 100%;
+  margin: 15px auto;
+  display: block;
+  overflow: hidden;
+}
+
+/*-------------------sytling for the tablet view-----------------------*/
+@media screen and (max-width: 976px) {
+  .top-contact {
+    display: none;
+  }
+  .mobile-none {
+    display: none !important;
+  }
+  .brand {
+    width: 8em;
+  }
+  .navbar-toggler {
+    display: block;
+    float: right;
+    margin: 8px;
+  }
+  .display-none-mobile {
+    display: none;
+  }
+  .ft-card-2 {
+    left: 10px;
+    height: 260px;
+  }
+
+  .features-list {
+    padding: 5px;
+  }
+  .navbar-expand-lg {
+    width: 100%;
+  }
+  .top-signup {
+    float: left !important;
+  }
+  .nav {
+    margin-top: -15px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .top-contact-wrap {
+    background: rgba(0, 0, 0, 0.6) !important ;
+  }
+  nav ul li a {
+    color: #fff !important;
+    font-weight: 600;
+    font-family: raleway;
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .dropdown-menu {
+    background: #3e4250 !important ;
+  }
+
+  .slide-h1 {
+    padding: 0.5em 0 0 0;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .slider-img1,
+  .slider-img2,
+  .slider-img3 {
+    padding: 10em 0.9em;
+  }
+  .how-it-work {
+    padding: 10px;
+  }
+  .top-contact-wrap {
+    padding: 0;
+  }
+
+  .raise {
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  .footer-link {
+    padding: 20px 0;
+  }
+  .footer-list {
+    padding: 0;
+  }
+  .plan-wrap {
+    padding: 10px 10px;
+  }
+  .reg-box {
+    padding: 10px;
+  }
+  .reg-form {
+    padding: 0em 2em;
+  }
+
+  .reg-first-col {
+    padding: 10em 2em 6em 4em;
+  }
+  .footer-logo {
+    width: 132px;
+  }
+
+  /* ===about=== */
+  .abt-building,
+  .abt-us-write {
+    width: 100%;
+  }
+  .abt-number {
+    font-size: 20px;
+    width: 10px;
+    margin: 0 23px 0 0;
+  }
+  .col-crypto {
+    padding: 1px;
+  }
+  .bg-market {
+    height: 60vh;
+  }
+  .t-h2 {
+    font-size: 3em;
+    text-align: center !important;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .form-main-sec {
+    padding: 3em 5px;
+  }
+}
+
+/*===========Responsiveness========================*/
+/*// Small devices (landscape phones, 576px and up)*/
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 0.9em;
+  }
+  ad-55 {
+    padding: 0;
+  }
+  .toggle-abt-h {
+    margin: -38px 51px;
+  }
+  .create-acc {
+    margin: 10px auto;
+    font-size: 0.9em;
+    float: none;
+  }
+
+  /*-------------first column styling ---------------*/
+  .first-row h1 {
+    font-size: 20px;
+  }
+  .first-row p {
+    font-size: 0.9em;
+  }
+  .abt-body::before {
+    margin-top: -15px;
+  }
+
+  .abt-body > div h2 {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .abt-txt {
+    text-align: center;
+  }
+  .about-main-title {
+    font-size: 22px !important;
+    line-height: 1 !important;
+    padding-top: 169px !important;
+  }
+  .cert {
+    width: 100%;
+  }
+
+  .nav {
+    margin-top: 0 !important;
+  }
+  .col-f-nav {
+    position: absolute;
+  }
+}
