@@ -19,7 +19,10 @@
     "cloudinary": "^1.32.0",
     "connect-flash": "^0.1.1",
     "cors": "^2.8.5",
+<<<<<<< HEAD
     "dotenv": "^16.0.3",
+=======
+>>>>>>> 77b44267b7ef3f5cc0b702bd24f894b97b27bb8a
     "express": "^4.17.1",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.0",
@@ -36,6 +39,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
+<<<<<<< HEAD
   },
   "repository": {
     "type": "git",
@@ -45,4 +49,7 @@
     "url": "https://github.com/producthuncho/gem/issues"
   },
   "homepage": "https://github.com/producthuncho/gem#readme"
+=======
+  }
+>>>>>>> 77b44267b7ef3f5cc0b702bd24f894b97b27bb8a
 }
