@@ -3,10 +3,11 @@ const mongoose = require("mongoose");
 let mongoURI;
 
 if (process.env.NODE_ENV === "production") {
-    mongoURI =
-        "mongodb+srv://Producthuncho:Delphine6718@cluster0.8o6e3pc.mongodb.net/?retryWrites=true&w=majority";
+    require('dotenv').config();
+    mongoURI = process.env.DB_URL
 } else {
-    mongoURI = "mongodb+srv://Producthuncho:Delphine6718@cluster0.8o6e3pc.mongodb.net/?retryWrites=true&w=majority";
+    require('dotenv').config();
+    mongoURI = process.env.DB_URL;
 }
 
 module.exports = async function() {
