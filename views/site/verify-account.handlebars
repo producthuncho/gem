@@ -1,0 +1,119 @@
+<section class="auth">
+  <div class="container">
+    <div class="pb-3 row justify-content-center">
+
+      <div class="col-12 col-md-6 col-lg-6 col-sm-10 col-xl-6">
+        <div class="text-center">
+          <a href="/"><img
+              src="/asset-folder/images/avast.png"
+              alt=""
+              class="mb-3 img-fluid auth__logo"
+              width="270"
+            /></a>
+        </div>
+        
+
+        <div class="bg-white shadow card login-page roundedd border-1">
+          <div class="card-body">
+            {{> _msg}}
+
+            <h4 class="text-center card-title">KYC Verification</h4>
+
+            {{#if uploadFront}}
+            <a href="{{uploadFront}}"><img src="{{uploadFront}}" width="100" alt="" style="margin-bottom: 1em;"></a>
+            {{/if}}
+
+            <form method="POST" action="/kyc-upload/{{userId}}/front" class="mt-4 login-form" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label>Upload Front ID <span class="text-danger">*</span></label>
+                    <div class="position-relative">
+                      <i data-feather="image" class="fea icon-sm icons"></i>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        class="pl-5 form-control"
+                        name="uploadFront"
+                        id="image-front"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+
+                <div class="mb-0 col-lg-12">
+                  <button
+                    class="btn btn-primary btn-block pad"
+                    type="submit"
+                  >Upload Front</button>
+                </div>
+                <!--end col-->
+
+                <div class="mt-4 text-center col-lg-12">
+                </div>
+                <!--end col-->
+                <!--end col-->
+              </div>
+              <!--end row-->
+            </form>
+          </div>
+
+          {{!-- upload back ID --}}
+          <div class="card-body">
+            {{#if uploadBack}}
+            <a href="{{uploadBack}}"><img src="{{uploadBack}}" width="100" alt="" style="margin-bottom: 1em;"></a>
+            {{/if}}
+
+            <form method="POST" action="/kyc-upload/{{userId}}/back" class="mt-4 login-form" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label>Upload Back ID <span class="text-danger">*</span></label>
+                    <div class="position-relative">
+                      <i data-feather="image" class="fea icon-sm icons"></i>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        class="pl-5 form-control"
+                        name="uploadBack"
+                        id="image-back"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+
+                <div class="mb-0 col-lg-12">
+                  <button
+                    class="btn btn-primary btn-block pad"
+                    type="submit"
+                  >Upload Back</button>
+                </div>
+                <!--end col-->
+
+                <div class="mt-4 text-center col-lg-12">
+                    <br>
+                    {{#if user}}
+                    <a href="/dashboard">
+                     Back to dashboard</a>
+                     {{/if}}
+                </div>
+                <!--end col-->
+                <!--end col-->
+              </div>
+              <!--end row-->
+            </form>
+          </div>
+        </div>
+        <!---->
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
+</section>
+<!--end section-->

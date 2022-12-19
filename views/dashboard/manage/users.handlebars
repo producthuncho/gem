@@ -1,0 +1,49 @@
+<script>
+  document.title = "Registered users - BullishFxOptions"
+</script>
+
+<div class="single-pro-review-area mt-t-30 mg-b-15">
+  <div class="container-fluid">
+    <div class="jumbotron" style="background-color: white;">
+
+      <h3><i class="fa fa-users"></i> REGISTERED USERS</h3>
+      <br /><br />
+      <p>Total: {{users.length}}</p>
+
+      <div style="overflow-x: scroll;">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Country</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {{#each users}}
+              <tr
+                onclick="window.location.href='/dashboard/manage/user/{{_id}}'"
+              >
+                <td>{{firstname}}</td>
+                <td>{{lastname}}</td>
+                <td>{{email}}</td>
+                <td>{{country}}</td>
+                <td>
+                  <a
+                    href="/dashboard/manage/user/{{_id}}"
+                    class="btn btn-primary"
+                  >View user</a>
+                </td>
+              </tr>
+
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

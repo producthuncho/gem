@@ -1,0 +1,65 @@
+<div class="d-xl-flex justify-content-xl-center align-items-xl-center">
+  <div
+    class="card"
+    style="background-color: rgba(255,255,255,0);max-width: 457px;"
+  >
+
+    <div class="card-body text-center">
+        {{> _msg }}
+        
+      <h4
+        class="text-center card-title"
+        style="font-weight: bold; font-family: 'Baloo Bhai', cursive;"
+      >Add/ Change Your Bitcoin Address<br /></h4>
+      <h6 class="text-muted card-subtitle mb-2">{{websiteName}} recommend the
+        use of Bitcoin&nbsp;<br /></h6>
+      <h6 class="text-muted card-subtitle mb-2"><i
+          class="fa fa-bitcoin"
+          style="font-size: 80px;color: #ff9100;"
+        ></i><br />it's Safe and Fast...<br /></h6>
+      <br />
+
+      <p>Current Bitcoin Address:
+        <br />
+        {{#if user.wallet}}
+          {{user.wallet}}
+        {{else}}
+          None
+        {{/if}}
+      </p>
+      <form
+        action="/dashboard/wallet"
+        method="POST"
+        style="margin-top: 39px;margin-bottom: 44px;"
+      >
+        <div class="form-group"><label style="font-size: 13px;">New Bitcoin
+            Address:
+            <br /><input
+              class="form-control"
+              type="text"
+              placeholder="Paste address here"
+              value=""
+              name="wallet"
+              required
+            /></label></div>
+        <div class="form-group"><button
+            class="btn btn-success"
+            type="submit"
+            name="submitbtc"
+          >Submit</button></div>
+      </form>
+      <div
+        class="alert alert-secondary"
+        role="alert"
+        style="padding-top: 0px;margin-bottom: 0px;"
+      ><button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        ><span aria-hidden="true">×</span></button><span><br />[Not conversant
+          with Bitcoin? For payment methods other than Bitcoin, Contact us:
+          {{websiteMail}}]<br /></span></div>
+    </div>
+  </div>
+</div>

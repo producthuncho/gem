@@ -1,0 +1,13 @@
+{{! start of floating whatsapp }}
+<link rel="stylesheet" href="/floating-whatsapp/floating-wpp.min.css" />
+<script src="/floating-whatsapp/floating-wpp.min.js"></script>
+
+<div class="floating-wpp"></div>
+
+<script>
+  $(function () { $('.floating-wpp').floatingWhatsApp({ phone: '16018970010',
+  {{! popupMessage: 'Chat With Us', }}
+  showPopup: true, message: 'Type your message', headerTitle: 'Chat With Us',
+  position: 'left' }); });
+</script>
+{{! end of floating whatsapp }}

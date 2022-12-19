@@ -1,0 +1,44 @@
+<svg height="233" viewBox="0 0 307 233" width="307" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" style="font-family: Open sans, sans-serif">
+    <linearGradient id="a" x1="88.609674%" x2="88.609674%" y1="89.901393%" y2="0%">
+        <stop offset="0" stop-opacity="0"/>
+        <stop offset=".803535947" stop-color="#01ab27" stop-opacity=".943506"/>
+        <stop offset="1" stop-color="#01b529"/>
+    </linearGradient>
+    <linearGradient id="b" x1="62.971802%" x2="62.971802%" y1="100%" y2="-5.426348%">
+        <stop offset="0" stop-opacity="0"/>
+        <stop offset=".961802149" stop-color="#11a4e4" stop-opacity=".928289"/>
+        <stop offset="1" stop-color="#12b1f6"/>
+    </linearGradient>
+    <g fill="none" fill-rule="evenodd" transform="" >
+        <g fill-rule="nonzero" transform="translate(0 28)">
+            <path d="m141.5 101.5 163-99v102h-163z" fill="url(#a)"/>
+            <path d="m141.5 101.5 163-99" stroke="#fff" stroke-dasharray="2 2" stroke-linejoin="round"/>
+            <path d="m140.5 99.5 163-99" stroke="#1b87d7" stroke-dasharray="2 2" stroke-linejoin="round"/>
+            <path d="m0 156 8-19 13 19 7.5-9.5 12-3 18.5-18.5 20.5-6.5 19.5 9 19-2.5 14.5-18 1.5 96-134 2z"
+                  fill="url(#b)"/>
+            <path d="m1 153.5 8-19 13 19 7.5-9.5 12-3 18.5-18.5 20.5-6.5 19.5 9 19-2.5 14.5-18" stroke="#1b87d7"/>
+            <path d="m1 155.5 8-19 13 19 7.5-9.5 12-3 18.5-18.5 20.5-6.5 19.5 9 19-2.5 14.5-18" stroke="#fff"/>
+            <circle cx="137" cy="104" fill="#fff" r="8" stroke="#077bbd" stroke-width="3"/>
+        </g>
+        <text fill="#077bbd" font-size="13" font-weight="bold"
+              letter-spacing="-.07119048">
+            <tspan x="96.997751" y="115">BUY</tspan>
+        </text>
+        <rect fill-rule="nonzero" height="19" rx="2" stroke="#007cc3" width="52" x="84.5" y="100.5"/>
+        <text fill="#fff" font-size="13" font-weight="bold"
+              letter-spacing="-.07119048">
+            <tspan x="266.507906" y="15">SELL</tspan>
+        </text>
+        <rect fill-rule="nonzero" height="19" rx="2" stroke="#fff" width="52" x="254.5" y=".5"/>
+        <g fill="#fff" font-size="13" font-weight="300"
+           letter-spacing="-.07119048">
+            <text>
+                <tspan x="238.237201" y="103">Profit</tspan>
+            </text>
+            <text>
+                <tspan x="16.940712" y="206">Market price</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

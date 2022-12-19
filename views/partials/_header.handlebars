@@ -1,0 +1,111 @@
+<div class="navbar_fixed main_header_area">
+  {{> _translator }}
+
+  <div class="header_top">
+
+		<div class="container">
+
+			<div class="header_top_inner">
+				<div class="float-right">
+					<ul class="list_style">
+
+						<li><a class="text-dark"><span><i class="fa fa-envelope"></i>{{websiteMail}}</span></a></li>
+					</ul>
+				</div>
+				<div class="float-right">
+					<ul class="nav list_style header_top_menu">
+						<li><a href="/login">Login</a></li>
+						<li><a href="/register">Register</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div> 
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <a class="navbar-brand" href="/">
+        <h5>{{websiteName}}</h5>
+        {{! <img src="/template/logo.png" width="150px"> }}
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+
+          </li>
+          <li class="nav-item">
+            <a href="/#invest" class="nav-link">Investment Plans</a>
+
+          </li>
+          <li class="nav-item submenu dropdown">
+            <a href="/#about" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item submenu dropdown">
+            <a href="/#services" class="nav-link">Our Services</a>
+          </li>
+          <li class="nav-item submenu dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >Crypto</a>
+            <ul class="dropdown-menu">
+              <li><a
+                  target="_blank"
+                  href="https://www.bitcoin.com/"
+                >Bitcoin</a></li>
+              <li><a
+                  target="_blank"
+                  href="https://ethereum.org/en/"
+                >Ethereum</a></li>
+              <li><a
+                  target="_blank"
+                  href="https://litecoin.com/en/"
+                >Litecoin</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+          <li class="nav-item"><a
+              href="/register"
+              class="nav-link"
+            >Register</a></li>
+
+          <li class="nav-item submenu dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >Where to buy Bitcoin</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://cex.io">CEX.IO</a></li>
+              <li><a href="https://coinmama.com">Coinmama</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</div>
