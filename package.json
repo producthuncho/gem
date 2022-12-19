@@ -36,5 +36,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://producthuncho: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@github.com/producthuncho/gem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/producthuncho/gem/issues"
+  },
+  "homepage": "https://github.com/producthuncho/gem#readme"
 }
